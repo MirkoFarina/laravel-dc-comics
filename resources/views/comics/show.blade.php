@@ -3,7 +3,7 @@
 @section('content')
     <main>
         <div class="container">
-            <div class="card my-3">
+            <div class="card my-5">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img class="w-100" src=" {{ $comic['image'] }} " class="img-fluid rounded-start" alt=" {{ $comic['title'] }} ">
@@ -18,6 +18,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary" href=" {{ route('comics.index') }} "> <-- INDIETRO </a>
             </div>
         </div>
     </main>
