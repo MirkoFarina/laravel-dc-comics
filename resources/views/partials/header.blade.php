@@ -7,6 +7,6 @@
                 DASHBOARD
             </h2>
         </div>
-        <a class="btn btn-success" href=" {{ route('comics.create') }} "> AGGIUNGI NUOVO ELEMENTO </a>
+        <a class="btn btn-success mb-5" href=" {{ route('comics.create') }} "> AGGIUNGI NUOVO ELEMENTO </a>
     </div>
 </header>
