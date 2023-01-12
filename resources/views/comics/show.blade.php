@@ -11,7 +11,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"> {{ $comic['title'] }} </h5>
-                            <p class="card-text"> {{ $comic['description'] }} </p>
+                            <p class="card-text"> {!! $comic['description'] !!} </p>
                             <p class="card-text"> Prezzo: <strong> {{ $comic['price'] }} &euro; </strong></p>
                             <p class="card-text"> Data Di Vendita: <strong> {{ $comic['sale_date'] }} </strong></p>
                             <p class="card-text"><small class="text-muted"> Serie: {{ $comic['series'] }} - Tipo: {{ $comic['type'] }} </small></p>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a class="btn btn-primary" href=" {{ route('comics.index') }} "> <-- INDIETRO </a>
+                <a class="btn btn-primary mb-5" href=" {{ route('comics.index') }} "> <-- INDIETRO </a>
             </div>
         </div>
     </main>
