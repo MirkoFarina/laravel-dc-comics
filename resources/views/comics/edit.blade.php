@@ -7,6 +7,7 @@
                 MODIFICA {{ $comic['title'] }}:
             </h1>
             <div>
+                <a class="btn btn-primary" href=" {{ route('comics.index') }} "> <-- INDIETRO </a>
                 @include('partials.button-show')
                 @include('partials.form-delete', ['comic'=>$comic, 'rotta'=>'comics.destroy'])
             </div>
