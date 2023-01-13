@@ -39,14 +39,9 @@ class ComicController extends Controller
         $comic = $request->all();
 
         $new_comic = new Comic();
-        $new_comic->title = $comic['title'];
-        $new_comic->slug = Comic::generator_slug($new_comic->title);
-        $new_comic->description = $comic['description'];
-        $new_comic->image = $comic['image'];
-        $new_comic->price = $comic['price'];
-        $new_comic->series = $comic['series'];
-        $new_comic->sale_date = $comic['sale_date'];
-        $new_comic->type = $comic['type'];
+
+        $comic['slug'] = Comic::generator_slug($comic['title']);
+        $new_comic->fill($comic);
         $new_comic->save();
 
         return redirect(route('comics.show', $new_comic));
@@ -71,7 +66,8 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -83,7 +79,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+
     }
 
     /**

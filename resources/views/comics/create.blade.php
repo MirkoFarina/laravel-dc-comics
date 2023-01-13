@@ -3,6 +3,9 @@
 @section('content')
     <main>
         <div class="container">
+            <h1>
+                AGGIUNGI UN NUOVO FUMETTO:
+            </h1>
             <form action=" {{ route('comics.store') }}" method="POST">
                 @csrf
                 <div class="mb-3">
@@ -15,7 +18,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo: </label>
-                    <input type="number" name="price" class="form-control" id="price" placeholder="#.##">
+                    <input type="text" name="price" class="form-control" id="price" placeholder="#.##">
                 </div>
                 <div class="mb-3">
                     <label for="series" class="form-label">Serie:</label>

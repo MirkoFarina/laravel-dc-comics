@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 
 class Comic extends Model
 {
+    protected $fillable = ['title', 'image', 'price','series', 'sale_date', 'type', 'description', 'slug'];
+
     public static function generator_slug ($title){
         $slug = Str::slug($title,'-');
         $original_slug = $slug;
