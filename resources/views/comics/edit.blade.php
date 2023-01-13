@@ -6,6 +6,10 @@
             <h1>
                 MODIFICA {{ $comic['title'] }}:
             </h1>
+            <div>
+                @include('partials.button-show')
+                @include('partials.form-delete', ['comic'=>$comic, 'rotta'=>'comics.destroy'])
+            </div>
             <form action=" {{ route('comics.update', $comic) }}" method="POST">
                 @csrf
                 @method('PUT')
