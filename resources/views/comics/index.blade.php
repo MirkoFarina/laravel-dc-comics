@@ -3,6 +3,13 @@
 @section('content')
     <main>
         <div class="container">
+            @if (session('deleted'))
+            <div class="alert alert-success" role="alert">
+                {{ session('deleted') }}
+              </div>
+
+            @endif
+
             <h1 class="text-center">
                 TABELLA FUMETTI
             </h1>
@@ -27,8 +34,7 @@
                                 <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary" title="show"><i class="fa-solid fa-eye"></i></a>
                                 <a href=" {{ route('comics.edit', $comic)}} " class="btn btn-warning" title="edit"><i
                                         class="fa-solid fa-pencil"></i></a>
-                                <a href="#" class="btn btn-danger" title="delete"><i
-                                        class="fa-solid fa-trash"></i></a>
+                                @include('partials.form-delete', ['comic' => $comic, 'rotta' => 'comics.destroy'])
                             </td>
                         </tr>
                         @empty
