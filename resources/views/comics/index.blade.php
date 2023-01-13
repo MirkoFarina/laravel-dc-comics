@@ -24,7 +24,7 @@
                             <td> {{ $comic['type'] }} </td>
                             <td> {{ $comic['series'] }} </td>
                             <td>
-                                <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary" title="view"><i class="fa-solid fa-eye"></i></a>
+                                <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary" title="show"><i class="fa-solid fa-eye"></i></a>
                                 <a href=" {{ route('comics.edit', $comic)}} " class="btn btn-warning" title="edit"><i
                                         class="fa-solid fa-pencil"></i></a>
                                 <a href="#" class="btn btn-danger" title="delete"><i
