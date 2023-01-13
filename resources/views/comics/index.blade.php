@@ -32,8 +32,7 @@
                             <td> {{ $comic['series'] }} </td>
                             <td>
                                 <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary" title="show"><i class="fa-solid fa-eye"></i></a>
-                                <a href=" {{ route('comics.edit', $comic)}} " class="btn btn-warning" title="edit"><i
-                                        class="fa-solid fa-pencil"></i></a>
+                                @include('partials.button-edit')
                                 @include('partials.form-delete', ['comic' => $comic, 'rotta' => 'comics.destroy'])
                             </td>
                         </tr>

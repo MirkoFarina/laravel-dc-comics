@@ -19,8 +19,12 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center">
-                <a class="btn btn-primary mb-5" href=" {{ route('comics.index') }} "> <-- INDIETRO </a>
+            <div class="d-flex align-items-center justify-content-center mb-5">
+                <a class="btn btn-primary mx-4" href=" {{ route('comics.index') }} "> <-- INDIETRO </a>
+                <div>
+                    @include('partials.form-delete', ['comic'=> $comic, 'rotta'=>'comics.destroy'])
+                    @include('partials.button-edit')
+                </div>
             </div>
         </div>
     </main>
