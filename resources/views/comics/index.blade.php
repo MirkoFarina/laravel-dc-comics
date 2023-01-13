@@ -31,7 +31,7 @@
                             <td> {{ $comic['type'] }} </td>
                             <td> {{ $comic['series'] }} </td>
                             <td>
-                                @include('partials.show');
+                                @include('partials.button-show')
                                 @include('partials.button-edit')
                                 @include('partials.form-delete', ['comic' => $comic, 'rotta' => 'comics.destroy'])
                             </td>
